@@ -53,7 +53,7 @@ nav.roles {
 }
 
 nav.general {
-	grid-template-columns: repeat(5, minmax(100px, 1fr));
+	grid-template-columns: repeat(2, minmax(100px, 1fr));
 }
 
 @media (max-width: 900px) {
