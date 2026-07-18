@@ -43,20 +43,27 @@ a:focus-visible {
 
 nav {
 	display: grid;
-	grid-template-columns: repeat(7, minmax(100px, 1fr));
 	gap: 10px;
 	justify-content: center;
 	padding: 20px;
 }
 
+nav.roles {
+	grid-template-columns: repeat(7, minmax(100px, 1fr));
+}
+
+nav.general {
+	grid-template-columns: repeat(5, minmax(100px, 1fr));
+}
+
 @media (max-width: 900px) {
-	nav {
+	nav.roles {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
 @media (max-width: 500px) {
-	nav {
+	nav.roles {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
