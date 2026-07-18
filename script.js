@@ -1,5 +1,11 @@
-document.querySelector('.role-dropdown').addEventListener('change', function() {
-    if (this.value){
-    	window.location.hash = this.value;
-    }
+const dropdown = document.querySelector(".role-dropdown");
+
+dropdown.addEventListener("change", function () {
+    if (!this.value) return;
+
+    document.getElementById(this.value).scrollIntoView({
+        behavior: "smooth"
+    });
+
+    this.selectedIndex = 0;
 });
