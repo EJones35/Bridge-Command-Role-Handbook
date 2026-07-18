@@ -1,0 +1,60 @@
+:root {
+	--background: midnightblue;
+	--text: white;
+	--header: steelblue;
+	--link: deepskyblue;
+	--link-hover: cyan;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--text);
+	font-family: "Exo 2", sans-serif;
+	margin: 10px;
+}
+
+main {
+	padding: 30px;
+}
+
+header {
+	text-align: center;
+	color: var(--header);
+}
+
+footer {
+	text-align: center;
+}
+
+a {
+	color: var(--link);
+}
+
+a:hover {
+	color: var(--link-hover);
+}
+
+a:focus-visible {
+	outline: 2px solid var(--link);
+	outline-offset: 4px;
+}
+
+nav {
+	display: grid;
+	grid-template-columns: repeat(7, minmax(100px, 1fr));
+	gap: 10px;
+	justify-content: center;
+	padding: 20px;
+}
+
+@media (max-width: 900px) {
+	nav {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 500px) {
+	nav {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
