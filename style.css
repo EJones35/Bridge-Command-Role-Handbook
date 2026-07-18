@@ -53,7 +53,10 @@ nav.roles {
 }
 
 nav.general {
-	grid-template-columns: repeat(2, minmax(100px, 1fr));
+	grid-template-columns: repeat(2, auto);
+	justify-content: center;
+	gap: 20px;
+	padding: 20px;
 }
 
 @media (max-width: 900px) {
