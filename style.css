@@ -4,6 +4,15 @@
 	--header: steelblue;
 	--link: deepskyblue;
 	--link-hover: cyan;
+	--card: darkslateblue;
+	--nav-general: pink;
+	--nav-roles: salmon;
+
+	--command: gray;
+	--operations: red;
+	--science: blue;
+	--engineering: gold;
+	--about: cadetblue;
 }
 
 body {
@@ -46,10 +55,12 @@ nav {
 	gap: 10px;
 	justify-content: center;
 	padding: 20px;
+	background-color: var(--card);
 }
 
 nav.roles {
 	grid-template-columns: repeat(7, minmax(100px, 1fr));
+	border: 5px solid var(--nav-roles);
 }
 
 nav.general {
@@ -57,6 +68,7 @@ nav.general {
 	justify-content: center;
 	gap: 20px;
 	padding: 20px;
+	border: 5px solid var(--nav-general);
 }
 
 @media (max-width: 900px) {
@@ -85,4 +97,36 @@ img.role-icon {
 	height: 1.2em;
 	width: auto;
 	vertical-align: middle;
+}
+
+.command {
+	border-left: 10px solid var(--command);
+	padding: 10px;
+}
+
+.operations {
+	border-left: 10px solid var(--operations);
+	padding: 10px;
+}
+
+.science {
+	border-left: 10px solid var(--science);
+	padding: 10px;
+}
+
+.engineering {
+	border-left: 10px solid var(--engineering);
+	padding: 10px;
+}
+
+.about {
+	border-left: 10px solid var(--about);
+	padding: 10px;
+}
+
+section {
+	background-color: var(--card);
+	padding: 25px;
+	margin: 30px 0;
+	border-radius: 10px;
 }
