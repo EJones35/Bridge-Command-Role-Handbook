@@ -14,6 +14,10 @@
 	--about: cadetblue;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
 	background-color: var(--background);
 	color: var(--text);
@@ -66,6 +70,7 @@ nav.general {
 	justify-content: center;
 	gap: 20px;
 	padding: 20px;
+	align-items: center
 }
 
 @media (max-width: 900px) {
@@ -122,7 +127,39 @@ section {
 	border-radius: 10px;
 }
 
-.role-dropdown {
-	background-color: var(--card);
+details {
+	width: 150px;
+	background: var(--card);
+	border-radius: 8px;
 	color: var(--link);
+	position: relative;
+}
+
+summary {
+	padding: 10px;
+	cursor: pointer;
+	list-style: none;
+}
+
+details a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+
+details a:hover {
+	background: cornflowerblue;
+}
+
+.dropdown-menu {
+	position: absolute;
+	z-index: 10;
+	width: 200px;
+	background: var(--card);
+	border: 5px solid var(--link);
+}
+
+summary:focus-visible {
+	outline: 2px solid var(--link);
+	outline-offset: 4px;
 }
