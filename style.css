@@ -109,9 +109,19 @@ nav.general {
 }
 
 img.role-icon {
-	height: 1.2em;
+	height: 2em;
 	width: auto;
 	vertical-align: middle;
+}
+
+img.subteam-icon {
+	height: 4em;
+	width: auto;
+	vertical-align: middle;
+}
+
+img.shuttle-subteam-icon {
+	height: 2em;
 }
 
 .command {
