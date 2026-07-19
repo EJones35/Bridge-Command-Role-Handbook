@@ -1,19 +1,24 @@
 const dropdown = document.querySelector(".role-dropdown");
+const summary = dropdown.querySelector("summary");
+
+function closeDropdown() {
+    if (!dropdown.hasAttribute("open")) return;
+    dropdown.removeAttribute("open");
+    summary.focus();
+}
 
 dropdown.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-        dropdown.removeAttribute("open");
-    });
+    link.addEventListener("click", closeDropdown);
 });
 
 document.addEventListener("click", (e) => {
     if (!dropdown.contains(e.target)) {
-        dropdown.removeAttribute("open");
+        closeDropdown();
     }
 });
 
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-        dropdown.removeAttribute("open");
+        closeDropdown();
     }
 });
