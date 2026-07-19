@@ -1,11 +1,19 @@
 const dropdown = document.querySelector(".role-dropdown");
 
-dropdown.addEventListener("change", function () {
-    if (!this.value) return;
-
-    document.getElementById(this.value).scrollIntoView({
-        behavior: "smooth"
+dropdown.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        dropdown.removeAttribute("open");
     });
+});
 
-    this.selectedIndex = 0;
+document.addEventListener("click", (e) => {
+    if (!dropdown.contains(e.target)) {
+        dropdown.removeAttribute("open");
+    }
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        dropdown.removeAttribute("open");
+    }
 });
