@@ -79,7 +79,6 @@ a:focus-visible {
 nav {
 	display: grid;
 	gap: 10px;
-	justify-content: center;
 	padding: 20px;
 	background-color: var(--card);
 }
