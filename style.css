@@ -201,3 +201,7 @@ summary:focus-visible {
 .general-card {
 	border: 5px solid var(--about)
 }
+
+h3, h4 {
+	text-decoration: underline;
+}
